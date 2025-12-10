@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junte-se ao Nosso Grupo de Autocuidado</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        
+        // SUBSTITUA 'SEU_PIXEL_ID' pelo ID do seu Pixel do Facebook
+        fbq('init', '1222205103155187');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=SEU_PIXEL_ID&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background: #fafafa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                        url('SUA_IMAGEM_BANNER_AQUI.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 3rem 1.5rem;
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            margin-bottom: 2rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .hero-badge {
+            background: rgba(201, 168, 124, 0.9);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Beneficios Section */
+        .beneficios {
+            padding: 5rem 0;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            color: #2d2d2d;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .beneficios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .beneficio-card {
+            background: #fafafa;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .beneficio-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(201, 168, 124, 0.2);
+        }
+
+        .beneficio-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #c9a87c, #e8d5c4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .beneficio-card h3 {
+            font-size: 1.4rem;
+            color: #2d2d2d;
+            margin-bottom: 1rem;
+        }
+
+        .beneficio-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Depoimentos */
+        .depoimentos {
+            padding: 5rem 0;
+            background: #fafafa;
+        }
+
+        .depoimentos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .depoimento-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .quote {
+            font-size: 3.5rem;
+            color: #c9a87c;
+            opacity: 0.3;
+            line-height: 1;
+            font-family: Georgia, serif;
+            margin-bottom: 1rem;
+        }
+
+        .depoimento-text {
+            color: #666;
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .cliente-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #c9a87c, #e8d5c4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .cliente-nome {
+            font-weight: 600;
+            color: #2d2d2d;
+        }
+
+        .stars {
+            color: #ffc107;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Formulario Section */
+        .formulario {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #c9a87c 0%, #b89a70 100%);
+        }
+
+        .formulario .section-title h2,
+        .formulario .section-title p {
+            color: white;
+        }
+
+        .form-wrapper {
+            max-width: 600px;
+            margin: 3rem auto 0;
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .form-header h3 {
+            font-size: 1.8rem;
+            color: #2d2d2d;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-header p {
+            color: #666;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2d2d2d;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #c9a87c;
+            box-shadow: 0 5px 15px rgba(201, 168, 124, 0.2);
+        }
+
+        .submit-btn {
+            width: 100%;
+            background: #c9a87c;
+            color: white;
+            padding: 1.2rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #b89a70;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(201, 168, 124, 0.4);
+        }
+
+        .submit-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            margin-top: 1rem;
+            color: #666;
+        }
+
+        .success-msg {
+            display: none;
+            background: linear-gradient(135deg, #d4edda, #c3e6cb);
+            color: #155724;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .error-msg {
+            display: none;
+            background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+            color: #721c24;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .privacy-text {
+            text-align: center;
+            color: #999;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d2d2d;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            opacity: 0.9;
+        }
+
+        footer a {
+            color: #c9a87c;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            margin: 1.5rem 0;
+            opacity: 0.3;
+        }
+
+        /* Animacoes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                min-height: 60vh;
+            }
+
+            .beneficios,
+            .depoimentos,
+            .formulario {
+                padding: 3rem 0;
+            }
+
+            .form-wrapper {
+                padding: 2rem 1.5rem;
+            }
+
+            .depoimentos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content fade-in">
+            <div class="hero-badge">✨ Grupo Exclusivo de Autocuidado</div>
+            <h1>Descubra o Poder do Autocuidado e da Paz Interior</h1>
+            <p>Junte-se a centenas de pessoas que transformaram suas vidas através de práticas diárias de autocuidado, harmonia e bem-estar. Um espaço seguro para compartilhar, aprender e crescer juntos.</p>
+        </div>
+    </section>
+
+    <!-- Benefícios -->
+    <section class="beneficios">
+        <div class="container">
+            <div class="section-title">
+                <h2>Por Que Fazer Parte?</h2>
+                <p>Benefícios exclusivos para membros do grupo</p>
+            </div>
+
+            <div class="beneficios-grid">
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">🧘‍♀️</div>
+                    <h3>Paz de Espírito</h3>
+                    <p>Aprenda técnicas comprovadas de relaxamento, meditação e mindfulness para encontrar sua paz interior.</p>
+                </div>
+
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">💆‍♀️</div>
+                    <h3>Autocuidado Diário</h3>
+                    <p>Dicas práticas e rotinas personalizadas para cuidar de você mesmo física, mental e emocionalmente.</p>
+                </div>
+
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">🌿</div>
+                    <h3>Harmonia e Equilíbrio</h3>
+                    <p>Encontre o equilíbrio perfeito entre sua vida pessoal, profissional e espiritual.</p>
+                </div>
+
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">👥</div>
+                    <h3>Comunidade Acolhedora</h3>
+                    <p>Faça parte de uma comunidade que apoia, inspira e motiva você todos os dias.</p>
+                </div>
+
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">📚</div>
+                    <h3>Conteúdo Exclusivo</h3>
+                    <p>Acesso a materiais, vídeos, áudios e lives exclusivas sobre bem-estar e autocuidado.</p>
+                </div>
+
+                <div class="beneficio-card">
+                    <div class="beneficio-icon">💪</div>
+                    <h3>Transformação Real</h3>
+                    <p>Resultados comprovados de pessoas que mudaram suas vidas através do autocuidado consciente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="depoimentos">
+        <div class="container">
+            <div class="section-title">
+                <h2>O Que Dizem Nossos Membros</h2>
+                <p>Histórias reais de transformação e paz interior</p>
+            </div>
+
+            <div class="depoimentos-grid">
+                <div class="depoimento-card">
+                    <div class="quote">"</div>
+                    <div class="stars">★★★★★</div>
+                    <p class="depoimento-text">
+                        Adoro fazer a massagem aqui! É um momento só meu, onde encontro paz e renovação. A equipa é maravilhosa e o ambiente é perfeito para relaxar. Recomendo vivamente!
+                    </p>
+                    <div class="cliente-info">
+                        <div class="avatar">AL</div>
+                        <div>
+                            <div class="cliente-nome">Sr. Adulcino Lutucuta</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="depoimento-card">
+                    <div class="quote">"</div>
+                    <div class="stars">★★★★★</div>
+                    <p class="depoimento-text">
+                        Desde que comecei a frequentar, sinto-me muito mais leve e equilibrado. As técnicas de relaxamento mudaram completamente a minha rotina. Excelente!
+                    </p>
+                    <div class="cliente-info">
+                        <div class="avatar">SM</div>
+                        <div>
+                            <div class="cliente-nome">Sr. Simeão</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="depoimento-card">
+                    <div class="quote">"</div>
+                    <div class="stars">★★★★★</div>
+                    <p class="depoimento-text">
+                        Fantástico! Finalmente encontrei um lugar onde posso cuidar de mim sem pressas. O grupo é acolhedor e aprendo sempre algo novo. Vale muito a pena!
+                    </p>
+                    <div class="cliente-info">
+                        <div class="avatar">RY</div>
+                        <div>
+                            <div class="cliente-nome">Sr. Rony</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulário -->
+    <section class="formulario" id="formulario">
+        <div class="container">
+            <div class="section-title">
+                <h2>Garanta Sua Vaga Agora!</h2>
+                <p>Preencha o formulário e entre para o nosso grupo exclusivo no WhatsApp</p>
+            </div>
+
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h3>🎯 Últimas Vagas Disponíveis</h3>
+                    <p>Não perca essa oportunidade de transformação</p>
+                </div>
+
+                <form id="capturaForm">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo *</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefone">Número de Telefone *</label>
+                        <input type="tel" id="telefone" name="telefone" required placeholder="+244 912 345 678">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="whatsapp">Número de WhatsApp *</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" required placeholder="+244 912 345 678">
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        Entrar no Grupo Agora 🚀
+                    </button>
+
+                    <div class="loading" id="loading">
+                        <p>⏳ Processando seu cadastro...</p>
+                    </div>
+
+                    <div class="success-msg" id="successMsg">
+                        ✅ Cadastro realizado! Redirecionando para o grupo...
+                    </div>
+
+                    <div class="error-msg" id="errorMsg">
+                        ❌ Erro ao processar. Tente novamente.
+                    </div>
+
+                    <p class="privacy-text">
+                        🔒 Seus dados estão seguros. Não compartilhamos suas informações com terceiros.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Grupo de Autocuidado e Bem-Estar</strong></p>
+            <p>Transformando vidas através do autocuidado consciente</p>
+            <hr class="divider">
+            <p>© 2024 Todos os direitos reservados</p>
+            <p>Desenvolvido com ❤️ por <a href="#" target="_blank">Elevate</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // CONFIGURAÇÃO: Cole aqui a URL do seu Google Apps Script
+        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbypHKzwsnATkwFv92xgI53wO0v2UpiZP4TH0BQI-Qe2aMQdWPVlc-B2rNh8gk2nTuPD/exec';
+        
+        // Link do grupo do WhatsApp já configurado
+        const WHATSAPP_GROUP_URL = 'https://chat.whatsapp.com/LmSkuVI2UmJ1rbMwsSrbJt';
+
+        const form = document.getElementById('capturaForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const loading = document.getElementById('loading');
+        const successMsg = document.getElementById('successMsg');
+        const errorMsg = document.getElementById('errorMsg');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Pegar dados do formulário
+            const nome = document.getElementById('nome').value.trim();
+            const telefone = document.getElementById('telefone').value.trim();
+            const whatsapp = document.getElementById('whatsapp').value.trim();
+
+            // Validação básica
+            if (!nome || !telefone || !whatsapp) {
+                errorMsg.textContent = '❌ Por favor, preencha todos os campos.';
+                errorMsg.style.display = 'block';
+                setTimeout(() => {
+                    errorMsg.style.display = 'none';
+                }, 3000);
+                return;
+            }
+
+            // Desabilitar botão e mostrar loading
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Processando...';
+            loading.style.display = 'block';
+            errorMsg.style.display = 'none';
+
+            try {
+                // Dispara evento de Lead no Facebook Pixel
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'Lead', {
+                        content_name: 'Grupo Autocuidado',
+                        content_category: 'Lead Generation'
+                    });
+                }
+
+                // Enviar dados para Google Sheets via Apps Script
+                const response = await fetch(SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        nome: nome,
+                        telefone: telefone,
+                        whatsapp: whatsapp,
+                        data: new Date().toLocaleString('pt-BR'),
+                        origem: 'Landing Page Autocuidado'
+                    })
+                });
+
+                // Mostrar mensagem de sucesso
+                loading.style.display = 'none';
+                successMsg.style.display = 'block';
+                form.reset();
+
+                // Dispara evento de conversão completa no Facebook Pixel
+                if (typeof fbq !== 'undefined') {
+                    fbq('track', 'CompleteRegistration', {
+                        content_name: 'Grupo Autocuidado',
+                        status: 'completed'
+                    });
+                }
+
+                // Redirecionar para o grupo do WhatsApp após 2 segundos
+                setTimeout(() => {
+                    window.location.href = WHATSAPP_GROUP_URL;
+                }, 2000);
+
+            } catch (error) {
+                console.error('Erro:', error);
+                loading.style.display = 'none';
+                errorMsg.textContent = '❌ Erro ao processar. Tente novamente.';
+                errorMsg.style.display = 'block';
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Entrar no Grupo Agora 🚀';
+
+                setTimeout(() => {
+                    errorMsg.style.display = 'none';
+                }, 3000);
+            }
+        });
+
+        // Log para debug (remover em produção)
+        console.log('Landing Page de Captura carregada!');
+        console.log('Lembre-se de configurar SCRIPT_URL e WHATSAPP_GROUP_URL no código JavaScript');
+    </script>
+
+    <!-- 
+    ========================================
+    INSTRUÇÕES PARA CONFIGURAR O GOOGLE APPS SCRIPT:
+    ========================================
+    
+    1. Crie uma nova planilha no Google Sheets
+    2. Vá em Extensões > Apps Script
+    3. Cole o código abaixo e salve:
+
+    function doPost(e) {
+      try {
+        const sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+        const data = JSON.parse(e.postData.contents);
+        
+        sheet.appendRow([
+          data.nome,
+          data.telefone,
+          data.whatsapp,
+          data.data
+        ]);
+        
+        return ContentService.createTextOutput(JSON.stringify({
+          'status': 'success'
+        })).setMimeType(ContentService.MimeType.JSON);
+        
+      } catch(error) {
+        return ContentService.createTextOutput(JSON.stringify({
+          'status': 'error',
+          'message': error.toString()
+        })).setMimeType(ContentService.MimeType.JSON);
+      }
+    }
+
+    4. Clique em "Implantar" > "Nova implantação"
+    5. Escolha "Aplicativo da Web"
+    6. Em "Quem tem acesso", selecione "Qualquer pessoa"
+    7. Copie a URL gerada e cole na variável SCRIPT_URL acima
+    8. Cole o link do seu grupo do WhatsApp na variável WHATSAPP_GROUP_URL
+    
+    ========================================
+    -->
+</body>
+</html>
