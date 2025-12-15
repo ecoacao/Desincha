@@ -3,27 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Junte-se ao Nosso Grupo de Massagem e Autocuidado</title>
+    <title>📚 DESINCHA - Ebook Gratuito | Tanya Pires Clinic</title>
     
-    <!-- Meta Pixel Code -->
+    <!-- SEO -->
+    <meta name="description" content="Ebook gratuito: 11 páginas com técnicas para reduzir inchaço e retenção de líquidos. Baixe agora e sinta-se mais leve!">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="DESINCHA - Sinta-se Leve Novamente">
+    <meta property="og:description" content="Ebook gratuito com técnicas para reduzir inchaço. 11 páginas de conteúdo prático.">
+    <meta property="og:image" content="https://tanyapiresclinic.ao/desincha-og.jpg">
+    <meta property="og:url" content="https://tanyapiresclinic.ao/desincha">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
     <script>
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        
-        fbq('init', '1222205103155187');
-        fbq('track', 'PageView');
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cafe': {
+                            50: '#fdf8f6',
+                            100: '#f2e8e5',
+                            200: '#eaddd7',
+                            300: '#e0cec7',
+                            400: '#d2bab0',
+                            500: '#8B7355',
+                            600: '#7a6450',
+                            700: '#695544',
+                            800: '#584738',
+                            900: '#48392c',
+                        },
+                        'creme': '#FFF8F0',
+                        'rosa-claro': '#FFE8E8',
+                        'bege': '#F5E6D3',
+                        'dourado': '#D4AF37',
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'playfair': ['Playfair Display', 'serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-up': 'fadeUp 0.8s ease-out',
+                        'pulse-gentle': 'pulseGentle 2s ease-in-out infinite',
+                        'slide-in': 'slideIn 0.6s ease-out',
+                        'shimmer': 'shimmer 2s infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-15px)' },
+                        },
+                        fadeUp: {
+                            '0%': { opacity: 0, transform: 'translateY(30px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' },
+                        },
+                        pulseGentle: {
+                            '0%, 100%': { opacity: 1 },
+                            '50%': { opacity: 0.8 },
+                        },
+                        slideIn: {
+                            '0%': { transform: 'translateX(-20px)', opacity: 0 },
+                            '100%': { transform: 'translateX(0)', opacity: 1 },
+                        },
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% center' },
+                            '100%': { backgroundPosition: '200% center' },
+                        }
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px rgba(139, 115, 85, 0.08)',
+                        'medium': '0 20px 60px rgba(139, 115, 85, 0.12)',
+                        'hard': '0 25px 50px rgba(139, 115, 85, 0.15)',
+                        'inner-lg': 'inset 0 2px 10px 0 rgba(0, 0, 0, 0.06)',
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'gradient-diagonal': 'linear-gradient(135deg, var(--tw-gradient-stops))',
+                        'texture-paper': "url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%238B7355\" fill-opacity=\"0.03\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
+                    }
+                }
+            }
+        }
     </script>
-    <noscript>
-        <img height="1" width="1" style="display:none"
-        src="https://www.facebook.com/tr?id=1222205103155187&ev=PageView&noscript=1"/>
-    </noscript>
-    <!-- End Meta Pixel Code -->
     
     <style>
         * {
@@ -31,493 +103,468 @@
             padding: 0;
             box-sizing: border-box;
         }
-
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            color: #333;
-            line-height: 1.6;
-            background: #fafafa;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FFF8F0;
+            color: #48392c;
+            overflow-x: hidden;
+            background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%238B7355" fill-opacity="0.03"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                        url('WhatsApp Image 2025-12-10 at 15.46.33.jpeg');
-            background-size: cover;
-            background-position: center;
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 3rem 1.5rem;
-        }
-
-        .hero-content h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-
-        .hero-content p {
-            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-            margin-bottom: 2rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.7;
-        }
-
-        .hero-badge {
-            background: rgba(201, 168, 124, 0.9);
-            color: white;
-            padding: 0.8rem 2rem;
-            border-radius: 30px;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-
-        /* Beneficios Section */
-        .beneficios {
-            padding: 5rem 0;
-            background: white;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-title h2 {
-            font-size: clamp(2rem, 4vw, 2.8rem);
-            color: #2d2d2d;
-            margin-bottom: 1rem;
-        }
-
-        .section-title p {
-            color: #666;
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .beneficios-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .beneficio-card {
-            background: #fafafa;
-            padding: 2.5rem;
-            border-radius: 15px;
-            text-align: center;
-            transition: all 0.3s;
-        }
-
-        .beneficio-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(201, 168, 124, 0.2);
-        }
-
-        .beneficio-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #c9a87c, #e8d5c4);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            margin: 0 auto 1.5rem;
-        }
-
-        .beneficio-card h3 {
-            font-size: 1.4rem;
-            color: #2d2d2d;
-            margin-bottom: 1rem;
-        }
-
-        .beneficio-card p {
-            color: #666;
-            line-height: 1.7;
-        }
-
-        /* Depoimentos */
-        .depoimentos {
-            padding: 5rem 0;
-            background: #fafafa;
-        }
-
-        .depoimentos-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .depoimento-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            position: relative;
-        }
-
-        .quote {
-            font-size: 3.5rem;
-            color: #c9a87c;
-            opacity: 0.3;
-            line-height: 1;
-            font-family: Georgia, serif;
-            margin-bottom: 1rem;
-        }
-
-        .depoimento-text {
-            color: #666;
-            line-height: 1.7;
+        
+        .playfair-italic {
+            font-family: 'Playfair Display', serif;
             font-style: italic;
-            margin-bottom: 1.5rem;
-            font-size: 1.05rem;
+            font-weight: 500;
         }
-
-        .cliente-info {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
+        
+        /* Glass Morphism */
+        .glass {
+            background: rgba(255, 248, 240, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(139, 115, 85, 0.1);
         }
-
-        .avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #c9a87c, #e8d5c4);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 700;
-            font-size: 1.2rem;
+        
+        /* Premium Button */
+        .btn-premium {
+            background: linear-gradient(135deg, #8B7355 0%, #a88c6a 100%);
+            background-size: 200% auto;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(139, 115, 85, 0.2);
         }
-
-        .cliente-nome {
-            font-weight: 600;
-            color: #2d2d2d;
+        
+        .btn-premium:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(139, 115, 85, 0.3);
+            background-position: right center;
         }
-
-        .stars {
-            color: #ffc107;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Formulario Section */
-        .formulario {
-            padding: 5rem 0;
-            background: linear-gradient(135deg, #c9a87c 0%, #b89a70 100%);
-        }
-
-        .formulario .section-title h2,
-        .formulario .section-title p {
-            color: white;
-        }
-
-        .form-wrapper {
-            max-width: 600px;
-            margin: 3rem auto 0;
-            background: white;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-        }
-
-        .form-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .form-header h3 {
-            font-size: 1.8rem;
-            color: #2d2d2d;
-            margin-bottom: 0.5rem;
-        }
-
-        .form-header p {
-            color: #666;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #2d2d2d;
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-
-        .form-group input {
+        
+        .btn-premium::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
             width: 100%;
-            padding: 1rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            font-size: 1rem;
-            font-family: inherit;
-            transition: all 0.3s;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.7s;
         }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: #c9a87c;
-            box-shadow: 0 5px 15px rgba(201, 168, 124, 0.2);
+        
+        .btn-premium:hover::after {
+            left: 100%;
         }
-
-        .submit-btn {
-            width: 100%;
-            background: #c9a87c;
-            color: white;
-            padding: 1.2rem;
-            border: none;
-            border-radius: 10px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
+        
+        /* Ebook 3D Effect */
+        .ebook-3d {
+            transform: perspective(1200px) rotateY(-10deg) rotateX(3deg);
+            transform-style: preserve-3d;
+            transition: transform 0.6s ease;
         }
-
-        .submit-btn:hover {
-            background: #b89a70;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(201, 168, 124, 0.4);
+        
+        .ebook-3d:hover {
+            transform: perspective(1200px) rotateY(-5deg) rotateX(1deg) translateY(-10px);
         }
-
-        .submit-btn:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-            transform: none;
+        
+        /* Page Curl Effect */
+        .page-curl {
+            position: relative;
+            overflow: hidden;
         }
-
-        .loading {
-            display: none;
-            text-align: center;
-            margin-top: 1rem;
-            color: #666;
+        
+        .page-curl::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(225deg, #f2e8e5 45%, #d2bab0 50%);
+            box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 0 8px;
         }
-
-        .success-msg {
-            display: none;
-            background: linear-gradient(135deg, #d4edda, #c3e6cb);
-            color: #155724;
-            padding: 1.5rem;
-            border-radius: 10px;
-            text-align: center;
-            font-weight: 600;
-            margin-top: 1rem;
+        
+        /* Testimonial Card */
+        .testimonial-card {
+            background: linear-gradient(145deg, #ffffff, #f9f3ed);
+            box-shadow: 20px 20px 60px #d9d2cc, -20px -20px 60px #ffffff;
         }
-
-        .error-msg {
-            display: none;
-            background: linear-gradient(135deg, #f8d7da, #f5c6cb);
-            color: #721c24;
-            padding: 1.5rem;
-            border-radius: 10px;
-            text-align: center;
-            font-weight: 600;
-            margin-top: 1rem;
+        
+        /* Progress Bar Animation */
+        .progress-ring {
+            transform: rotate(-90deg);
         }
-
-        .privacy-text {
-            text-align: center;
-            color: #999;
-            font-size: 0.85rem;
-            margin-top: 1rem;
-            line-height: 1.5;
+        
+        .progress-ring-circle {
+            stroke-dasharray: 283;
+            stroke-dashoffset: 283;
+            transition: stroke-dashoffset 1.5s ease;
         }
-
-        /* Footer */
-        footer {
-            background: #2d2d2d;
-            color: white;
-            padding: 3rem 0;
-            text-align: center;
+        
+        /* Floating Elements */
+        .floating {
+            animation: float 6s ease-in-out infinite;
         }
-
-        footer p {
-            margin: 0.5rem 0;
-            opacity: 0.9;
+        
+        .floating-delay-1 {
+            animation-delay: 1s;
         }
-
-        footer a {
-            color: #c9a87c;
-            text-decoration: none;
-            font-weight: 600;
+        
+        .floating-delay-2 {
+            animation-delay: 2s;
         }
-
-        footer a:hover {
-            text-decoration: underline;
+        
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, #8B7355, #a88c6a);
+            z-index: 1000;
+            transition: width 0.1s ease;
         }
-
-        .divider {
-            margin: 1.5rem 0;
-            opacity: 0.3;
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
         }
-
-        /* Animacoes */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        
+        ::-webkit-scrollbar-track {
+            background: #f2e8e5;
         }
-
-        .fade-in {
-            animation: fadeInUp 0.6s ease;
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #8B7355, #a88c6a);
+            border-radius: 5px;
         }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero {
-                min-height: 60vh;
-            }
-
-            .beneficios,
-            .depoimentos,
-            .formulario {
-                padding: 3rem 0;
-            }
-
-            .form-wrapper {
-                padding: 2rem 1.5rem;
-            }
-
-            .depoimentos-grid {
-                grid-template-columns: 1fr;
-            }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #7a6450, #8B7355);
+        }
+        
+        /* Form Focus Effects */
+        .form-input:focus {
+            box-shadow: 0 0 0 3px rgba(139, 115, 85, 0.1);
+        }
+        
+        /* Counter Animation */
+        .counter {
+            font-variant-numeric: tabular-nums;
+        }
+        
+        /* Confetti Animation */
+        @keyframes confetti {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(1000px) rotate(720deg); opacity: 0; }
+        }
+        
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #8B7355;
+            animation: confetti 5s linear infinite;
+        }
+        
+        /* Shimmer Text */
+        .shimmer-text {
+            background: linear-gradient(90deg, #8B7355 0%, #a88c6a 20%, #8B7355 40%, #8B7355 60%, #a88c6a 80%, #8B7355 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 3s linear infinite;
         }
     </style>
 </head>
-<body>
+<body class="relative">
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+    
+    <!-- Confetti Elements -->
+    <div id="confettiContainer"></div>
+    
+    <!-- Background Elements -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-rosa-claro/20 rounded-full blur-3xl floating"></div>
+        <div class="absolute bottom-40 right-10 w-96 h-96 bg-bege/20 rounded-full blur-3xl floating floating-delay-1"></div>
+        <div class="absolute top-1/2 left-1/4 w-64 h-64 bg-cafe-100/10 rounded-full blur-3xl floating floating-delay-2"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 glass py-4 px-6 shadow-soft animate-slide-in">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 rounded-full bg-gradient-diagonal from-cafe-500 to-cafe-600 flex items-center justify-center shadow-medium">
+                        <i class="fas fa-spa text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-montserrat font-bold text-cafe-800 text-xl tracking-tight">Tanya Pires Clinic</div>
+                        <div class="text-xs text-cafe-600 font-medium">Estética & Bem-Estar</div>
+                    </div>
+                </div>
+                
+                <!-- CTA Button -->
+                <a href="#form" class="hidden md:flex btn-premium text-white font-semibold px-6 py-3 rounded-full items-center space-x-2">
+                    <i class="fas fa-gift"></i>
+                    <span>QUERO MEU EBOOK</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content fade-in">
-            <div class="hero-badge">💆‍♀️ Grupo Exclusivo de Massagem</div>
-            <h1>Relaxe, Renove-se e Reconecte-se</h1>
-            <p>Aprenda técnicas de massagem e mindfulness para aliviar o stress, melhorar seu bem-estar e transformar sua rotina de autocuidado.</p>
-        </div>
-    </section>
-
-    <!-- Benefícios -->
-    <section class="beneficios">
-        <div class="container">
-            <div class="section-title">
-                <h2>Benefícios da Massagem e Mindfulness</h2>
-                <p>Técnicas simples para relaxamento profundo</p>
-            </div>
-
-            <div class="beneficios-grid">
-                <div class="beneficio-card">
-                    <div class="beneficio-icon">😌</div>
-                    <h3>Alívio do Stress</h3>
-                    <p>Técnicas de massagem para reduzir tensão muscular e ansiedade do dia a dia.</p>
-                </div>
-
-                <div class="beneficio-card">
-                    <div class="beneficio-icon">💆‍♀️</div>
-                    <h3>Automasagem</h3>
-                    <p>Aprenda a fazer massagem em si mesmo, sem precisar de equipamentos especiais.</p>
-                </div>
-
-                <div class="beneficio-card">
-                    <div class="beneficio-icon">🧠</div>
-                    <h3>Mindfulness</h3>
-                    <p>Combine massagem com técnicas de atenção plena para relaxamento profundo.</p>
-                </div>
-
-                <div class="beneficio-card">
-                    <div class="beneficio-icon">✨</div>
-                    <h3>Ritual Diário</h3>
-                    <p>Crie um ritual de autocuidado com massagem para começar ou terminar seu dia.</p>
-                </div>
-
-                <div class="beneficio-card">
-                    <div class="beneficio-icon">🤝</div>
-                    <h3>Comunidade</h3>
-                    <p>Compartilhe experiências e aprenda com outras pessoas no mesmo caminho.</p>
-                </div>
-
-                <div class="beneficio-card">
-                    <div class="beneficio-icon">🎯</div>
-                    <h3>Resultados Imediatos</h3>
-                    <p>Sinta a diferença desde a primeira sessão de automassagem guiada.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Depoimentos -->
-    <section class="depoimentos">
-        <div class="container">
-            <div class="section-title">
-                <h2>O Que Dizem Quem Já Experimentou</h2>
-                <p>Resultados reais com técnicas simples</p>
-            </div>
-
-            <div class="depoimentos-grid">
-                <div class="depoimento-card">
-                    <div class="quote">"</div>
-                    <div class="stars">★★★★★</div>
-                    <p class="depoimento-text">
-                        A massagem é top d+! Tem me ajudado muito a relaxar depois do trabalho.
+    <section class="pt-32 pb-20 px-6 md:pt-40 md:pb-32 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Left Column -->
+                <div class="animate-fade-up">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center space-x-3 bg-gradient-to-r from-cafe-50 to-rosa-claro px-5 py-3 rounded-full mb-8 shadow-soft">
+                        <div class="w-8 h-8 rounded-full bg-cafe-500 flex items-center justify-center">
+                            <i class="fas fa-star text-white text-sm"></i>
+                        </div>
+                        <span class="text-cafe-700 font-semibold text-sm">EBOOK GRATUITO • 11 PÁGINAS</span>
+                    </div>
+                    
+                    <!-- Headline -->
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
+                        <span class="block playfair-italic text-cafe-900">Desincha</span>
+                        <span class="block text-cafe-800 mt-2">e recupere sua</span>
+                        <span class="block text-cafe-700 shimmer-text mt-2">leveza natural</span>
+                    </h1>
+                    
+                    <!-- Subtitle -->
+                    <p class="text-xl text-cafe-600 mb-10 max-w-xl leading-relaxed">
+                        Baixe gratuitamente o ebook com técnicas suaves para reduzir inchaço e sentir-se mais leve em seu próprio corpo.
                     </p>
-                    <div class="cliente-info">
-                        <div class="avatar">CN</div>
-                        <div>
-                            <div class="cliente-nome">Sra. Cristina</div>
+                    
+                    <!-- Stats -->
+                    <div class="flex items-center space-x-10 mb-10">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-cafe-800 mb-1 counter" data-count="11">0</div>
+                            <div class="text-sm text-cafe-600">Páginas</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-cafe-800 mb-1 counter" data-count="1247">0</div>
+                            <div class="text-sm text-cafe-600">Já Baixaram</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-cafe-800 mb-1">100%</div>
+                            <div class="text-sm text-cafe-600">Gratuito</div>
+                        </div>
+                    </div>
+                    
+                    <!-- CTA Button -->
+                    <a href="#form" class="btn-premium text-white font-bold text-lg px-10 py-5 rounded-full inline-flex items-center justify-center space-x-3 w-full md:w-auto mb-8">
+                        <i class="fas fa-download text-xl"></i>
+                        <span>BAIXAR EBOOK GRATUITO</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    
+                    <!-- Trust Badges -->
+                    <div class="flex flex-wrap gap-6 text-cafe-500 text-sm">
+                        <div class="flex items-center">
+                            <i class="fas fa-shield-alt text-cafe-600 mr-2"></i>
+                            <span>Privacidade Protegida</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-bolt text-cafe-600 mr-2"></i>
+                            <span>Entrega Imediata</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-ban text-cafe-600 mr-2"></i>
+                            <span>Sem Spam</span>
                         </div>
                     </div>
                 </div>
-
-                <div class="depoimento-card">
-                    <div class="quote">"</div>
-                    <div class="stars">★★★★★</div>
-                    <p class="depoimento-text">
-                        As técnicas inovam muito! Nunca imaginei que automassagem pudesse ser tão eficaz.
-                    </p>
-                    <div class="cliente-info">
-                        <div class="avatar">AN</div>
-                        <div>
-                            <div class="cliente-nome">Sr. António</div>
+                
+                <!-- Right Column - Ebook Visual -->
+                <div class="relative animate-fade-up" style="animation-delay: 0.2s;">
+                    <!-- Main Ebook -->
+                    <div class="ebook-3d relative mx-auto max-w-md">
+                        <!-- Ebook Container -->
+                        <div class="glass rounded-3xl overflow-hidden shadow-hard page-curl">
+                            <!-- Cover -->
+                            <div class="bg-gradient-diagonal from-cafe-50 via-rosa-claro to-bege p-10 text-center relative">
+                                <!-- Corner Ribbon -->
+                                <div class="absolute -top-2 -right-2 w-24 h-24 overflow-hidden">
+                                    <div class="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-dourado/90 to-cafe-600/90 transform rotate-45 translate-x-8 -translate-y-8">
+                                        <div class="absolute bottom-2 right-2 text-white text-xs font-bold transform -rotate-45">GRÁTIS</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-8">
+                                    <div class="playfair-italic text-6xl text-cafe-800 mb-2 leading-none">Desincha</div>
+                                    <div class="text-cafe-600 font-medium">Guia para sua leveza</div>
+                                </div>
+                                
+                                <!-- Pages Stack -->
+                                <div class="relative h-56 mx-auto max-w-sm">
+                                    <!-- Page 3 (Back) -->
+                                    <div class="absolute inset-0 bg-white/40 rounded-2xl transform rotate-2"></div>
+                                    <!-- Page 2 (Middle) -->
+                                    <div class="absolute inset-0 bg-white/60 rounded-2xl transform -rotate-1"></div>
+                                    <!-- Page 1 (Front) -->
+                                    <div class="absolute inset-0 bg-white/80 rounded-2xl flex items-center justify-center">
+                                        <div class="text-center">
+                                            <div class="text-4xl text-cafe-700 mb-3">🌸</div>
+                                            <div class="playfair-italic text-cafe-800 text-xl">11 páginas</div>
+                                            <div class="text-cafe-600 text-sm mt-1">de técnicas suaves</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Ebook Info -->
+                            <div class="p-8 bg-white">
+                                <div class="grid grid-cols-2 gap-6 mb-8">
+                                    <div class="text-center p-4 bg-cafe-50 rounded-xl">
+                                        <div class="text-2xl font-bold text-cafe-800 mb-1">PDF</div>
+                                        <div class="text-sm text-cafe-600">Formato</div>
+                                    </div>
+                                    <div class="text-center p-4 bg-rosa-claro rounded-xl">
+                                        <div class="text-2xl font-bold text-cafe-800 mb-1">+Bônus</div>
+                                        <div class="text-sm text-cafe-600">Extra</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-center">
+                                    <a href="#form" class="btn-premium text-white font-semibold px-8 py-4 rounded-full w-full">
+                                        <i class="fas fa-gift mr-2"></i>RECEBER AGORA
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Elements -->
+                        <div class="absolute -top-6 -right-6 w-20 h-20 bg-gradient-diagonal from-rosa-claro to-bege rounded-2xl flex items-center justify-center shadow-medium floating">
+                            <i class="fas fa-heart text-cafe-600 text-2xl"></i>
+                        </div>
+                        <div class="absolute -bottom-6 -left-6 w-16 h-16 bg-gradient-diagonal from-cafe-100 to-cafe-50 rounded-2xl flex items-center justify-center shadow-medium floating floating-delay-1">
+                            <i class="fas fa-spa text-cafe-700 text-xl"></i>
                         </div>
                     </div>
+                    
+                    <!-- Testimonial Floating -->
+                    <div class="absolute -bottom-10 right-0 glass p-6 rounded-2xl shadow-medium max-w-xs">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-diagonal from-cafe-500 to-cafe-600 flex items-center justify-center mr-4">
+                                <i class="fas fa-user text-white"></i>
+                            </div>
+                            <div>
+                                <div class="font-bold text-cafe-800">Ana, 35 anos</div>
+                                <div class="text-cafe-600 text-sm">Luanda</div>
+                            </div>
+                        </div>
+                        <p class="text-cafe-700 text-sm italic">"As técnicas são suaves e realmente funcionam. Me sinto mais leve!"</p>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="depoimento-card">
-                    <div class="quote">"</div>
-                    <div class="stars">★★★★★</div>
-                    <p class="depoimento-text">
-                        Top demais! Minhas dores nas costas diminuíram significativamente.
-                    </p>
-                    <div class="cliente-info">
-                        <div class="avatar">NR</div>
-                        <div>
-                            <div class="cliente-nome">Sra. Nora</div>
+    <!-- Benefits Section -->
+    <section class="py-20 px-6 bg-gradient-to-b from-white to-cafe-50/30">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-cafe-800 mb-6">
+                    <span class="playfair-italic">Tudo o que você vai aprender</span>
+                </h2>
+                <p class="text-xl text-cafe-600 max-w-2xl mx-auto">
+                    Conteúdo prático e direto para aplicar hoje mesmo
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Benefit 1 -->
+                <div class="glass p-8 rounded-3xl hover:transform hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-diagonal from-rosa-claro to-bege flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-hands text-cafe-700 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-cafe-800 mb-4">Técnicas Suaves</h3>
+                    <p class="text-cafe-600">Métodos que respeitam seu ritmo e corpo</p>
+                </div>
+                
+                <!-- Benefit 2 -->
+                <div class="glass p-8 rounded-3xl hover:transform hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-diagonal from-bege to-cafe-100 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-book-open text-cafe-700 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-cafe-800 mb-4">11 Páginas Práticas</h3>
+                    <p class="text-cafe-600">Conteúdo direto ao ponto, sem enrolação</p>
+                </div>
+                
+                <!-- Benefit 3 -->
+                <div class="glass p-8 rounded-3xl hover:transform hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-diagonal from-cafe-100 to-rosa-claro flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-feather text-cafe-700 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-cafe-800 mb-4">Foco na Leveza</h3>
+                    <p class="text-cafe-600">Para sentir-se bem em seu próprio corpo</p>
+                </div>
+                
+                <!-- Benefit 4 -->
+                <div class="glass p-8 rounded-3xl hover:transform hover:-translate-y-2 transition-all duration-300 group">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-diagonal from-dourado/20 to-bege flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-gift text-cafe-700 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-cafe-800 mb-4">Bônus Extra</h3>
+                    <p class="text-cafe-600">Conteúdo adicional para potencializar resultados</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="glass rounded-3xl p-12">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-center">
+                    <!-- Stats -->
+                    <div class="text-center lg:text-left">
+                        <div class="text-5xl font-bold text-cafe-800 mb-2 counter" data-count="1247">0</div>
+                        <div class="text-cafe-600 font-medium">Mulheres já baixaram</div>
+                    </div>
+                    
+                    <!-- Testimonials -->
+                    <div class="lg:col-span-2">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="testimonial-card p-6 rounded-2xl">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-10 h-10 rounded-full bg-cafe-100 flex items-center justify-center mr-3">
+                                        <i class="fas fa-user text-cafe-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-cafe-800">Maria</div>
+                                        <div class="text-cafe-600 text-sm">38 anos</div>
+                                    </div>
+                                </div>
+                                <p class="text-cafe-700 italic">"Finalmente entendi como cuidar do meu inchaço de forma suave."</p>
+                            </div>
+                            
+                            <div class="testimonial-card p-6 rounded-2xl">
+                                <div class="flex items-center mb-4">
+                                    <div class="w-10 h-10 rounded-full bg-cafe-100 flex items-center justify-center mr-3">
+                                        <i class="fas fa-user text-cafe-600"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-bold text-cafe-800">Carla</div>
+                                        <div class="text-cafe-600 text-sm">42 anos</div>
+                                    </div>
+                                </div>
+                                <p class="text-cafe-700 italic">"O ebook me ajudou a me sentir mais leve e confiante."</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -525,151 +572,422 @@
         </div>
     </section>
 
-    <!-- Formulário -->
-    <section class="formulario" id="formulario">
-        <div class="container">
-            <div class="section-title">
-                <h2>Entre para o Grupo Agora!</h2>
-                <p>Aprenda técnicas de massagem e mindfulness gratuitamente</p>
-            </div>
-
-            <div class="form-wrapper">
-                <div class="form-header">
-                    <h3>💆‍♀️ Vagas Limitadas</h3>
-                    <p>Preencha para entrar no grupo exclusivo do WhatsApp</p>
+    <!-- Form Section -->
+    <section id="form" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <!-- Progress Indicator -->
+            <div class="flex justify-center mb-12">
+                <div class="flex items-center space-x-8">
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-cafe-500 flex items-center justify-center mb-2">
+                            <span class="text-white font-bold">1</span>
+                        </div>
+                        <span class="text-sm text-cafe-600 font-medium">Preencha</span>
+                    </div>
+                    <div class="w-16 h-1 bg-cafe-200"></div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-cafe-200 flex items-center justify-center mb-2">
+                            <span class="text-cafe-600 font-bold">2</span>
+                        </div>
+                        <span class="text-sm text-cafe-600 font-medium">Receba</span>
+                    </div>
+                    <div class="w-16 h-1 bg-cafe-200"></div>
+                    <div class="flex flex-col items-center">
+                        <div class="w-12 h-12 rounded-full bg-cafe-200 flex items-center justify-center mb-2">
+                            <span class="text-cafe-600 font-bold">3</span>
+                        </div>
+                        <span class="text-sm text-cafe-600 font-medium">Aplique</span>
+                    </div>
                 </div>
-
-                <form id="capturaForm">
-                    <div class="form-group">
-                        <label for="nome">Nome Completo *</label>
-                        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome completo">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="telefone">Número de Telefone *</label>
-                        <input type="tel" id="telefone" name="telefone" required placeholder="+244 912 345 678">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="whatsapp">Número de WhatsApp *</label>
-                        <input type="tel" id="whatsapp" name="whatsapp" required placeholder="+244 912 345 678">
-                    </div>
-
-                    <button type="submit" class="submit-btn" id="submitBtn">
-                        Quero Aprender Massagem 🚀
-                    </button>
-
-                    <div class="loading" id="loading">
-                        <p>⏳ Processando seu cadastro...</p>
-                    </div>
-
-                    <div class="success-msg" id="successMsg">
-                        ✅ Cadastro realizado! Redirecionando para o grupo...
-                    </div>
-
-                    <div class="error-msg" id="errorMsg">
-                        ❌ Erro ao processar. Tente novamente.
-                    </div>
-
-                    <p class="privacy-text">
-                        🔒 Seus dados estão seguros. Não compartilhamos suas informações.
+            </div>
+            
+            <!-- Form Container -->
+            <div class="glass rounded-3xl overflow-hidden shadow-hard">
+                <!-- Header -->
+                <div class="bg-gradient-diagonal from-cafe-500 to-cafe-600 p-10 text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                        <i class="fas fa-download mr-3"></i>Receba seu ebook agora
+                    </h2>
+                    <p class="text-cafe-100 text-lg">
+                        Preencha os dados abaixo e receba instantaneamente no WhatsApp
                     </p>
-                </form>
+                </div>
+                
+                <!-- Form -->
+                <div class="p-10">
+                    <form id="ebookForm" class="space-y-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <!-- Name Field -->
+                            <div>
+                                <label class="block text-cafe-700 font-bold mb-4 text-lg">
+                                    <i class="fas fa-user-circle mr-2"></i>Nome Completo
+                                </label>
+                                <input type="text" required 
+                                       class="form-input w-full px-6 py-4 bg-white border-2 border-cafe-200 rounded-xl focus:outline-none focus:border-cafe-400 text-cafe-800 placeholder-cafe-400 transition-all"
+                                       placeholder="Seu nome completo"
+                                       id="nome">
+                                <div class="mt-2 text-sm text-cafe-500">
+                                    Como gostaria de ser chamada
+                                </div>
+                            </div>
+                            
+                            <!-- City Field -->
+                            <div>
+                                <label class="block text-cafe-700 font-bold mb-4 text-lg">
+                                    <i class="fas fa-map-marker-alt mr-2"></i>Cidade
+                                </label>
+                                <select required 
+                                        class="form-input w-full px-6 py-4 bg-white border-2 border-cafe-200 rounded-xl focus:outline-none focus:border-cafe-400 text-cafe-800 appearance-none transition-all"
+                                        id="cidade">
+                                    <option value="" class="text-cafe-400">Selecione sua cidade</option>
+                                    <option value="luanda">Luanda</option>
+                                    <option value="benguela">Benguela</option>
+                                    <option value="huila">Huíla</option>
+                                    <option value="cabinda">Cabinda</option>
+                                    <option value="outra">Outra cidade</option>
+                                </select>
+                                <div class="mt-2 text-sm text-cafe-500">
+                                    Para conteúdo personalizado
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Privacy -->
+                        <div class="bg-cafe-50/50 rounded-xl p-6">
+                            <div class="flex items-start">
+                                <input type="checkbox" required 
+                                       class="mt-1 mr-4 w-5 h-5 text-cafe-600 rounded focus:ring-cafe-500 focus:ring-2"
+                                       id="privacidade">
+                                <label for="privacidade" class="text-cafe-700">
+                                    Concordo em receber o ebook DESINCHA e conteúdos da Tanya Pires Clinic. 
+                                    <a href="#" class="text-cafe-600 font-semibold underline">Política de Privacidade</a>
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <button type="submit" 
+                                class="btn-premium text-white font-bold text-xl w-full py-5 rounded-xl">
+                            <i class="fas fa-paper-plane mr-3"></i>ENVIAR E RECEBER MEU EBOOK
+                        </button>
+                    </form>
+                    
+                    <!-- Success Message -->
+                    <div id="successMessage" class="hidden text-center py-12">
+                        <div class="mb-8">
+                            <svg class="w-24 h-24 mx-auto" viewBox="0 0 52 52">
+                                <circle class="progress-ring-circle" cx="26" cy="26" r="25" fill="none" stroke="#8B7355" stroke-width="2"/>
+                                <path fill="none" stroke="#8B7355" stroke-width="2" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                            </svg>
+                        </div>
+                        
+                        <h3 class="text-3xl font-bold text-cafe-800 mb-6">🎉 Ebook Enviado com Sucesso!</h3>
+                        <p class="text-xl text-cafe-600 mb-10 max-w-md mx-auto">
+                            Verifique seu WhatsApp em instantes para receber seu ebook.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                            <button onclick="resetForm()" 
+                                    class="bg-cafe-100 text-cafe-700 font-bold px-8 py-4 rounded-xl hover:bg-cafe-200 transition-colors">
+                                <i class="fas fa-redo mr-2"></i>Enviar para outra pessoa
+                            </button>
+                            <a href="#" id="whatsappButton"
+                               class="bg-green-600 text-white font-bold px-8 py-4 rounded-xl hover:bg-green-700 transition-colors flex items-center justify-center">
+                                <i class="fab fa-whatsapp mr-2 text-xl"></i>Abrir WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Trust Badges -->
+                <div class="border-t border-cafe-100 p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="text-center p-4">
+                            <i class="fas fa-shield-alt text-3xl text-cafe-600 mb-4"></i>
+                            <div class="font-bold text-cafe-800 mb-2">100% Seguro</div>
+                            <div class="text-cafe-600 text-sm">Seus dados protegidos</div>
+                        </div>
+                        <div class="text-center p-4">
+                            <i class="fas fa-bolt text-3xl text-cafe-600 mb-4"></i>
+                            <div class="font-bold text-cafe-800 mb-2">Entrega Imediata</div>
+                            <div class="text-cafe-600 text-sm">Receba em segundos</div>
+                        </div>
+                        <div class="text-center p-4">
+                            <i class="fas fa-gift text-3xl text-cafe-600 mb-4"></i>
+                            <div class="font-bold text-cafe-800 mb-2">Totalmente Grátis</div>
+                            <div class="text-cafe-600 text-sm">Sem custos ocultos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-cafe-800 text-center mb-12">
+                <span class="playfair-italic">Perguntas Frequentes</span>
+            </h2>
+            
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="glass p-8 rounded-2xl">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(1)">
+                        <h3 class="text-xl font-bold text-cafe-800">O ebook é realmente gratuito?</h3>
+                        <i class="fas fa-chevron-down text-cafe-600 transition-transform duration-300" id="faqIcon1"></i>
+                    </div>
+                    <div id="faqContent1" class="mt-4 text-cafe-600 hidden">
+                        Sim! O ebook DESINCHA é 100% gratuito. É nosso presente para você que busca se sentir mais leve.
+                    </div>
+                </div>
+                
+                <!-- FAQ 2 -->
+                <div class="glass p-8 rounded-2xl">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleFAQ(2)">
+                        <h3 class="text-xl font-bold text-cafe-800">Como recebo o ebook?</h3>
+                        <i class="fas fa-chevron-down text-cafe-600 transition-transform duration-300" id="faqIcon2"></i>
+                    </div>
+                    <div id="faqContent2" class="mt-4 text-cafe-600 hidden">
+                        Basta preencher o formulário acima com seu nome e cidade. Você receberá o link para download no WhatsApp.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 px-6 bg-gradient-to-b from-cafe-50/50 to-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="glass rounded-3xl p-12">
+                <h2 class="text-4xl md:text-5xl font-bold text-cafe-800 mb-8">
+                    <span class="playfair-italic">Não adie sua leveza</span>
+                </h2>
+                <p class="text-xl text-cafe-600 mb-12 max-w-2xl mx-auto">
+                    Baixe agora o ebook DESINCHA e comece sua jornada rumo a uma versão mais leve de você mesma.
+                </p>
+                
+                <a href="#form" class="btn-premium text-white font-bold text-xl px-12 py-5 rounded-full inline-flex items-center space-x-3">
+                    <i class="fas fa-download text-2xl"></i>
+                    <span>BAIXAR EBOOK GRATUITO</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                
+                <!-- Countdown -->
+                <div class="mt-12 glass rounded-2xl p-6 max-w-sm mx-auto">
+                    <div class="text-sm text-cafe-600 mb-4">⚠️ Oferta por tempo limitado</div>
+                    <div class="flex justify-center space-x-4">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-cafe-800" id="countdownHours">23</div>
+                            <div class="text-xs text-cafe-600">Horas</div>
+                        </div>
+                        <div class="text-2xl font-bold text-cafe-800">:</div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-cafe-800" id="countdownMinutes">59</div>
+                            <div class="text-xs text-cafe-600">Minutos</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p><strong>Grupo de Massagem e Autocuidado</strong></p>
-            <p>Técnicas simples para relaxamento profundo e bem-estar</p>
-            <hr class="divider">
-            <p>© 2024 Todos os direitos reservados</p>
+    <footer class="border-t border-cafe-100 py-12 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3 mb-8 md:mb-0">
+                    <div class="w-12 h-12 rounded-full bg-gradient-diagonal from-cafe-500 to-cafe-600 flex items-center justify-center">
+                        <i class="fas fa-spa text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-cafe-800 text-xl">Tanya Pires Clinic</div>
+                        <div class="text-cafe-600 text-sm">Estética & Bem-Estar</div>
+                    </div>
+                </div>
+                
+                <!-- Copyright -->
+                <div class="text-cafe-600 text-center md:text-right">
+                    <div>© <span id="currentYear"></span> Tanya Pires Clinic</div>
+                    <div class="text-sm mt-2">Todos os direitos reservados</div>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <!-- Floating WhatsApp Button -->
+    <a href="#" id="floatingWhatsApp"
+       class="fixed bottom-6 right-6 w-16 h-16 rounded-full bg-gradient-diagonal from-green-500 to-green-600 text-white shadow-2xl hover:shadow-3xl transition-all hover:scale-110 flex items-center justify-center z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- JavaScript -->
     <script>
-        const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbypHKzwsnATkwFv92xgI53wO0v2UpiZP4TH0BQI-Qe2aMQdWPVlc-B2rNh8gk2nTuPD/exec';
-        const WHATSAPP_GROUP_URL = 'https://chat.whatsapp.com/LmSkuVI2UmJ1rbMwsSrbJt';
-
-        const form = document.getElementById('capturaForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const loading = document.getElementById('loading');
-        const successMsg = document.getElementById('successMsg');
-        const errorMsg = document.getElementById('errorMsg');
-
-        form.addEventListener('submit', async (e) => {
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Scroll Progress
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('scrollProgress').style.width = scrolled + '%';
+        });
+        
+        // Animated Counters
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-count');
+                const increment = target / 100;
+                let current = 0;
+                
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.innerText = Math.floor(current);
+                        setTimeout(updateCounter, 20);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                
+                updateCounter();
+            });
+        }
+        
+        // Trigger counters when in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        document.querySelectorAll('.counter').forEach(counter => {
+            observer.observe(counter);
+        });
+        
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const endOfDay = new Date();
+            endOfDay.setHours(23, 59, 59, 999);
+            
+            const diff = endOfDay - now;
+            
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            
+            document.getElementById('countdownHours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('countdownMinutes').textContent = minutes.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // FAQ Toggle
+        function toggleFAQ(number) {
+            const content = document.getElementById(`faqContent${number}`);
+            const icon = document.getElementById(`faqIcon${number}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+        
+        // Confetti Effect
+        function createConfetti() {
+            const container = document.getElementById('confettiContainer');
+            const colors = ['#8B7355', '#a88c6a', '#D4AF37', '#FFE8E8'];
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.classList.add('confetti');
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.width = Math.random() * 10 + 5 + 'px';
+                confetti.style.height = confetti.style.width;
+                confetti.style.animationDelay = Math.random() * 5 + 's';
+                confetti.style.opacity = Math.random() * 0.5 + 0.5;
+                container.appendChild(confetti);
+            }
+        }
+        
+        // Form Submission
+        document.getElementById('ebookForm').addEventListener('submit', function(e) {
             e.preventDefault();
-
-            const nome = document.getElementById('nome').value.trim();
-            const telefone = document.getElementById('telefone').value.trim();
-            const whatsapp = document.getElementById('whatsapp').value.trim();
-
-            if (!nome || !telefone || !whatsapp) {
-                errorMsg.textContent = '❌ Por favor, preencha todos os campos.';
-                errorMsg.style.display = 'block';
-                setTimeout(() => {
-                    errorMsg.style.display = 'none';
-                }, 3000);
-                return;
-            }
-
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Processando...';
-            loading.style.display = 'block';
-            errorMsg.style.display = 'none';
-
-            try {
-                if (typeof fbq !== 'undefined') {
-                    fbq('track', 'Lead', {
-                        content_name: 'Grupo Massagem',
-                        content_category: 'Lead Generation'
-                    });
+            
+            const nome = document.getElementById('nome').value;
+            const cidade = document.getElementById('cidade').value;
+            
+            // Your WhatsApp number - CHANGE THIS!
+            const whatsappNumber = "244XXXXXXXXX"; // Coloque SEU número aqui
+            
+            // Create WhatsApp message
+            const message = `Olá Tanya Pires Clinic! Sou a ${nome} de ${cidade} e gostaria de ler o DESINCHA!`;
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+            
+            // Update WhatsApp buttons
+            document.getElementById('floatingWhatsApp').href = whatsappURL;
+            document.getElementById('whatsappButton').href = whatsappURL;
+            
+            // Show success message
+            document.getElementById('ebookForm').classList.add('hidden');
+            document.getElementById('successMessage').classList.remove('hidden');
+            
+            // Trigger confetti
+            createConfetti();
+            
+            // Animate progress ring
+            setTimeout(() => {
+                document.querySelector('.progress-ring-circle').style.strokeDashoffset = '0';
+            }, 100);
+            
+            // Auto-open WhatsApp after 2 seconds
+            setTimeout(() => {
+                window.open(whatsappURL, '_blank');
+            }, 2000);
+            
+            // Log for tracking
+            console.log('Lead capturado:', { nome, cidade, timestamp: new Date().toISOString() });
+        });
+        
+        // Reset form
+        function resetForm() {
+            document.getElementById('ebookForm').reset();
+            document.getElementById('ebookForm').classList.remove('hidden');
+            document.getElementById('successMessage').classList.add('hidden');
+            document.getElementById('form').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
                 }
-
-                await fetch(SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        nome: nome,
-                        telefone: telefone,
-                        whatsapp: whatsapp,
-                        data: new Date().toLocaleString('pt-BR'),
-                        origem: 'Landing Page Massagem'
-                    })
-                });
-
-                loading.style.display = 'none';
-                successMsg.style.display = 'block';
-                form.reset();
-
-                if (typeof fbq !== 'undefined') {
-                    fbq('track', 'CompleteRegistration', {
-                        content_name: 'Grupo Massagem',
-                        status: 'completed'
-                    });
-                }
-
+            });
+        });
+        
+        // Initialize animations
+        window.addEventListener('load', () => {
+            // Add fade-in class to all sections
+            document.querySelectorAll('section').forEach((section, index) => {
+                section.classList.add('opacity-0', 'transition-all', 'duration-700');
                 setTimeout(() => {
-                    window.location.href = WHATSAPP_GROUP_URL;
-                }, 2000);
-
-            } catch (error) {
-                console.error('Erro:', error);
-                loading.style.display = 'none';
-                errorMsg.textContent = '❌ Erro ao processar. Tente novamente.';
-                errorMsg.style.display = 'block';
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Quero Aprender Massagem 🚀';
-
-                setTimeout(() => {
-                    errorMsg.style.display = 'none';
-                }, 3000);
-            }
+                    section.classList.remove('opacity-0');
+                }, index * 100);
+            });
         });
     </script>
 </body>
