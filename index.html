@@ -824,247 +824,67 @@
 
     <!-- JavaScript -->
     <script>
-        // Set current year
+    // ================= CONFIGURAÇÃO =================
+    // 1. SUA URL DO GOOGLE APPS SCRIPT
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbypHKzwsnATkwFv92xgI53wO0v2UpiZP4TH0BQI-Qe2aMQdWPVlc-B2rNh8gk2nTuPD/exec';
+    
+    // 2. LINK DO EBOOK
+    const EBOOK_URL = 'https://drive.google.com/file/d/1g28k8egOKDzWskpC1jwqBRk-cbYT4kqO/view?usp=sharing';
+    
+    // 3. SEU NÚMERO DE WHATSAPP (Angola: 244)
+    const WHATSAPP_NUMBER = "244955192757";
+    
+    // 4. CONTADORES FIXOS (você pode alterar esses números)
+    const TOTAL_PAGINAS = 11;
+    const TOTAL_BAIXARAM = 1247;
+    
+    // ================================================
+    
+    // Inicialização quando a página carrega
+    document.addEventListener('DOMContentLoaded', function() {
+        // 1. Definir ano atual
         document.getElementById('currentYear').textContent = new Date().getFullYear();
         
-        // Scroll Progress
-        window.addEventListener('scroll', () => {
-            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const scrolled = (winScroll / height) * 100;
-            document.getElementById('scrollProgress').style.width = scrolled + '%';
+        // 2. Configurar contadores FIXOS
+        document.querySelectorAll('[data-count="11"]').forEach(el => {
+            el.textContent = TOTAL_PAGINAS;
+        });
+        document.querySelectorAll('[data-count="1247"]').forEach(el => {
+            el.textContent = TOTAL_BAIXARAM.toLocaleString('pt-BR');
         });
         
-        // Animated Counters
-        function animateCounters() {
-            const counters = document.querySelectorAll('.counter');
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-count');
-                const increment = target / 100;
-                let current = 0;
-                
-                const updateCounter = () => {
-                    if (current < target) {
-                        current += increment;
-                        counter.innerText = Math.floor(current);
-                        setTimeout(updateCounter, 20);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-                
-                updateCounter();
-            });
-        }
+        // 3. Configurar barra de progresso do scroll
+        window.addEventListener('scroll', updateScrollProgress);
         
-        // Trigger counters when in view
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-        
-        document.querySelectorAll('.counter').forEach(counter => {
-            observer.observe(counter);
-        });
-        
-        // Countdown Timer
-        function updateCountdown() {
-            const now = new Date();
-            const endOfDay = new Date();
-            endOfDay.setHours(23, 59, 59, 999);
-            
-            const diff = endOfDay - now;
-            
-            const hours = Math.floor(diff / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            
-            document.getElementById('countdownHours').textContent = hours.toString().padStart(2, '0');
-            document.getElementById('countdownMinutes').textContent = minutes.toString().padStart(2, '0');
-        }
-        
-        setInterval(updateCountdown, 1000);
+        // 4. Configurar contador regressivo
         updateCountdown();
+        setInterval(updateCountdown, 1000);
         
-        // FAQ Toggle
-        function toggleFAQ(number) {
-            const content = document.getElementById(`faqContent${number}`);
-            const icon = document.getElementById(`faqIcon${number}`);
-            
-            if (content.classList.contains('hidden')) {
-                content.classList.remove('hidden');
-                icon.classList.add('rotate-180');
-            } else {
-                content.classList.add('hidden');
-                icon.classList.remove('rotate-180');
-            }
-        }
-        
-        // Confetti Effect
-        function createConfetti() {
-            const container = document.getElementById('confettiContainer');
-            const colors = ['#8B7355', '#a88c6a', '#D4AF37', '#FFE8E8'];
-            
-            for (let i = 0; i < 50; i++) {
-                const confetti = document.createElement('div');
-                confetti.classList.add('confetti');
-                confetti.style.left = Math.random() * 100 + 'vw';
-                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-                confetti.style.width = Math.random() * 10 + 5 + 'px';
-                confetti.style.height = confetti.style.width;
-                confetti.style.animationDelay = Math.random() * 5 + 's';
-                confetti.style.opacity = Math.random() * 0.5 + 0.5;
-                container.appendChild(confetti);
-            }
-        }
-        
-        // Form Submission
-        document.getElementById('ebookForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const nome = document.getElementById('nome').value;
-            const cidade = document.getElementById('cidade').value;
-            
-            // Your WhatsApp number - CHANGE THIS!
-            const whatsappNumber = "244XXXXXXXXX"; // Coloque SEU número aqui
-            
-            // Create WhatsApp message
-            const message = `Olá Tanya Pires Clinic! Sou a ${nome} de ${cidade} e gostaria de ler o DESINCHA!`;
-            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-            
-            // Update WhatsApp buttons
-            document.getElementById('floatingWhatsApp').href = whatsappURL;
-            document.getElementById('whatsappButton').href = whatsappURL;
-            
-            // Show success message
-            document.getElementById('ebookForm').classList.add('hidden');
-            document.getElementById('successMessage').classList.remove('hidden');
-            
-            // Trigger confetti
-            createConfetti();
-            
-            // Animate progress ring
-            setTimeout(() => {
-                document.querySelector('.progress-ring-circle').style.strokeDashoffset = '0';
-            }, 100);
-            
-            // Auto-open WhatsApp after 2 seconds
-            setTimeout(() => {
-                window.open(whatsappURL, '_blank');
-            }, 2000);
-            
-            // Log for tracking
-            console.log('Lead capturado:', { nome, cidade, timestamp: new Date().toISOString() });
-        });
-        
-        // Reset form
-        function resetForm() {
-            document.getElementById('ebookForm').reset();
-            document.getElementById('ebookForm').classList.remove('hidden');
-            document.getElementById('successMessage').classList.add('hidden');
-            document.getElementById('form').scrollIntoView({ behavior: 'smooth' });
-        }
-        
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-        
-        // Initialize animations
-        window.addEventListener('load', () => {
-            // Add fade-in class to all sections
-            document.querySelectorAll('section').forEach((section, index) => {
-                section.classList.add('opacity-0', 'transition-all', 'duration-700');
-                setTimeout(() => {
-                    section.classList.remove('opacity-0');
-                }, index * 100);
-            });
-        });
-     
-    // Configuração - SUBSTITUA ESTAS VARIÁVEIS PELAS SUAS
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbypHKzwsnATkwFv92xgI53wO0v2UpiZP4TH0BQI-Qe2aMQdWPVlc-B2rNh8gk2nTuPD/exec'; // COLE SUA URL AQUI
-    const EBOOK_URL = 'https://drive.google.com/file/d/1g28k8egOKDzWskpC1jwqBRk-cbYT4kqO/view?usp=sharing'; // Link do ebook
+        // 5. Inicializar animações
+        initializeAnimations();
+    });
     
-    // WhatsApp - SUBSTITUA PELO SEU NÚMERO
-    const WHATSAPP_NUMBER = "244955192757"; // SEU NÚMERO com código do país (Angola: 244)
-    
-    // ========================================
-    // NÃO PRECISA ALTERAR NADA DAQUI PARA BAIXO
-    // ========================================
-    
-    // Set current year
-    document.getElementById('currentYear').textContent = new Date().getFullYear();
-    
-    // Scroll Progress
-    window.addEventListener('scroll', () => {
+    // Barra de progresso do scroll
+    function updateScrollProgress() {
         const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = (winScroll / height) * 100;
         document.getElementById('scrollProgress').style.width = scrolled + '%';
-    });
-    
-    // Animated Counters
-    function animateCounters() {
-        const counters = document.querySelectorAll('.counter');
-        counters.forEach(counter => {
-            const target = +counter.getAttribute('data-count');
-            const increment = target / 100;
-            let current = 0;
-            
-            const updateCounter = () => {
-                if (current < target) {
-                    current += increment;
-                    counter.innerText = Math.floor(current);
-                    setTimeout(updateCounter, 20);
-                } else {
-                    counter.innerText = target;
-                }
-            };
-            
-            updateCounter();
-        });
     }
     
-    // Trigger counters when in view
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateCounters();
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    document.querySelectorAll('.counter').forEach(counter => {
-        observer.observe(counter);
-    });
-    
-    // Countdown Timer
+    // Contador regressivo
     function updateCountdown() {
         const now = new Date();
         const endOfDay = new Date();
         endOfDay.setHours(23, 59, 59, 999);
         
         const diff = endOfDay - now;
-        
         const hours = Math.floor(diff / (1000 * 60 * 60));
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
         
         document.getElementById('countdownHours').textContent = hours.toString().padStart(2, '0');
         document.getElementById('countdownMinutes').textContent = minutes.toString().padStart(2, '0');
     }
-    
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
     
     // FAQ Toggle
     function toggleFAQ(number) {
@@ -1125,7 +945,7 @@
         }
     }
     
-    // Form Submission
+    // FORMULÁRIO - SUBMISSÃO
     document.getElementById('ebookForm').addEventListener('submit', async function(e) {
         e.preventDefault();
         
@@ -1144,8 +964,12 @@
             console.warn('Lead não foi salvo no Sheets, mas continuando...');
         }
         
-        // 2. CRIAR MENSAGEM PARA WHATSAPP
-        const message = `Olá Tanya Pires Clinic! Sou a ${nome} de ${cidade} e acabei de baixar o ebook DESINCHA!`;
+        // 2. CRIAR MENSAGEM PERSONALIZADA PARA WHATSAPP
+        // A pessoa vai enviar esta mensagem para você
+        const message = `Olá Tanya! 👋 Meu nome é *${nome}* e sou de *${cidade}*. 
+
+Acabei de me inscrever para receber o ebook DESINCHA e gostaria de receber o link, por favor! 😊`;
+        
         const whatsappURL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
         
         // 3. ATUALIZAR BOTÕES DO WHATSAPP
@@ -1162,17 +986,15 @@
             document.querySelector('.progress-ring-circle').style.strokeDashoffset = '0';
         }, 100);
         
-        // 6. ABRIR EBOOK EM UMA NOVA ABA
-        setTimeout(() => {
-            window.open(EBOOK_URL, '_blank');
-        }, 1500);
-        
-        // 7. ABRIR WHATSAPP EM OUTRA ABA (opcional)
+        // 6. ABRIR WHATSAPP EM NOVA ABA (a pessoa envia a mensagem para você)
         setTimeout(() => {
             window.open(whatsappURL, '_blank');
-        }, 2500);
+        }, 1500);
         
-        // Log para tracking
+        // 7. VOCÊ PRECISA CONFIGURAR RESPOSTA AUTOMÁTICA NO WHATSAPP BUSINESS
+        // Depois que a pessoa enviar a mensagem acima, você responde com:
+        // "Olá [nome]! Aqui está o link do ebook: [LINK_DO_EBOOK]"
+        
         console.log('Lead capturado:', { nome, cidade, timestamp: new Date().toISOString() });
     });
     
@@ -1196,7 +1018,7 @@
     });
     
     // Initialize animations
-    window.addEventListener('load', () => {
+    function initializeAnimations() {
         // Add fade-in class to all sections
         document.querySelectorAll('section').forEach((section, index) => {
             section.classList.add('opacity-0', 'transition-all', 'duration-700');
@@ -1204,7 +1026,29 @@
                 section.classList.remove('opacity-0');
             }, index * 100);
         });
-    });
+    }
+    
+    // Configuração EXTRA para você:
+    /*
+    NO SEU WHATSAPP BUSINESS, CONFIGURE UMA RESPOSTA AUTOMÁTICA:
+    
+    1. Baixe o WhatsApp Business
+    2. Vá em Configurações > Negócio > Respostas automáticas
+    3. Crie uma resposta para "Mensagens de ausência":
+    
+    TEXTO DA RESPOSTA:
+    Olá! 👋 
+    
+    Obrigada pelo seu interesse no ebook DESINCHA!
+    
+    Aqui está o link para download gratuito:
+    📥 https://drive.google.com/file/d/1g28k8egOKDzWskpC1jwqBRk-cbYT4kqO/view?usp=sharing
+    
+    Espero que ajude você a se sentir mais leve!
+    
+    Com carinho,
+    Tanya 🌸
+    */
     </script>
 </body>
 </html>
